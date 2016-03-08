@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+# Use materialize front end framework
+gem 'materialize-sass'
+
