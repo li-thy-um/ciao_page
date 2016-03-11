@@ -1,16 +1,17 @@
-<h1>New Article</h1>
-<%= form_for :article do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :text %><br/>
-    <%= f.text_area :text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="row">
+  <h1>New Article</h1>
+  <%= form_for :article, url: articles_path, html: {class: "col s12"} do |f| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :title %>
+        <%= f.label :title %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_area :text, class: "materialize-textarea" %>
+        <%= f.label :text %>
+      </div>
+    </div>
+  <% end %>
+</div>
