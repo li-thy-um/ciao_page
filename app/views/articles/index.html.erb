@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row tags">
+        <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">label</i>Select a tag</div>
+                    <div class="collapsible-body">
+                        <% @tags.each do |t| %>
+                            <a href="<%= t.name %>" class="waves-effect btn"><%= t.name %></a>
+                        <% end %>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row articles">
+        <div class="col s12"></div>
+    </div>
+</div>

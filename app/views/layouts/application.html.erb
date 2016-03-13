@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CiaoPage</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title><%= @page_title or "Ciao.moe" %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield :head %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
+    <nav class="z-depth-1" role="navagation">
+        <div class="container">
+            
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Ciao.moe</a>
+                <a href="#!" data-activates="mobile-nav" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><%= link_to 'Articles', articles_path %></li>
+                    <li><%= link_to 'Projects', articles_path %></li>
+                    <li><%= link_to 'About me', articles_path %></li>
+                </ul>
+                <ul class="side-nav" id="mobile-nav">
+                    <li><%= link_to 'Articles', articles_path %></li>
+                    <li><%= link_to 'Projects', articles_path %></li>
+                    <li><%= link_to 'About me', articles_path %></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<%= yield %>
-
+    <%= yield %>
 </body>
 </html>

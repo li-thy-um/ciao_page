@@ -10,9 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
-@import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+ 
 @import "materialize";
+
+body {
+    font-family: 'Abel', sans-serif;
+}
