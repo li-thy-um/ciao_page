@@ -3,7 +3,8 @@
 <head>
     <title><%= @page_title or "Ciao.moe" %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons' %>
+    <%= stylesheet_link_tag    'http://fonts.useso.com/icon?family=Material+Icons' %>
+    <%= stylesheet_link_tag     'http://fonts.useso.com/css?family=Abel', ref: 'stylesheet', type: 'text/css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= yield :head %>
     <%= csrf_meta_tags %>

@@ -6,7 +6,7 @@
                     <div class="collapsible-header"><i class="material-icons">label</i>Select a tag</div>
                     <div class="collapsible-body">
                         <% @tags.each do |t| %>
-                            <a href="<%= t.name %>" class="waves-effect btn"><%= t.name %></a>
+                            <%= link_to t.name, articles_path(tag_id: t.id), class: "waves-effect btn z-depth-1" %>
                         <% end %>
                     </div>
                 </li>
@@ -14,6 +14,6 @@
         </div>
     </div>
     <div class="row articles">
-        <div class="col s12"></div>
+        <div class="col s12"> </div>
     </div>
 </div>
