@@ -13,7 +13,22 @@
             </ul>
         </div>
     </div>
-    <div class="row articles">
-        <div class="col s12"> </div>
-    </div>
+    <% @articles.each do |article| %>
+        <div class="row articles">
+            <div class="col s12">
+                <div class="card small">
+                    <div class="card-image">
+                        <%= image_tag 'sample-2.jpg', alt: 'sample-1' %>
+                    </div>
+                    <div class="card-content">
+                        <p><span class="article-title"><%= article.title %></span> - <span class="article-author"><%= article.author %></span></p>
+                        <p class="truncate"><%= article.content %></p>
+                    </div>
+                    <div class="card-action">
+                        <%= link_to 'see more', '#' %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
 </div>
