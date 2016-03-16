@@ -1,34 +1,42 @@
+<% if @tag %>
+  <% provide :title, 'Articles(' + @tag.name + ')' %>
+<% else %>
+  <% provide :title, 'Articles' %>
+<% end %>
 <div class="container">
-    <div class="row tags">
-        <div class="col s12">
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">label</i>Select a tag</div>
-                    <div class="collapsible-body">
-                        <% @tags.each do |t| %>
-                            <%= link_to t.name, articles_path(tag_id: t.id), class: "waves-effect btn z-depth-1" %>
-                        <% end %>
-                    </div>
-                </li>
-            </ul>
-        </div>
+  <div class="row tags">
+    <div class="col s12">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">label</i>Select a tag</div>
+          <div class="collapsible-body">
+            <%= link_to 'All', articles_path, class: "waves-effect btn z-depth-1" %>
+            <% @tags.each do |t| %>
+              <%= link_to t.name, articles_path(tag_id: t.id), class: "waves-effect btn z-depth-1" %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
     </div>
-    <% @articles.each do |article| %>
-        <div class="row articles">
-            <div class="col s12">
-                <div class="card small">
-                    <div class="card-image">
-                        <%= image_tag 'sample-2.jpg', alt: 'sample-1' %>
-                    </div>
-                    <div class="card-content">
-                        <p><span class="article-title"><%= article.title %></span> - <span class="article-author"><%= article.author %></span></p>
-                        <p class="truncate"><%= article.content %></p>
-                    </div>
-                    <div class="card-action">
-                        <%= link_to 'see more', '#' %>
-                    </div>
-                </div>
-            </div>
+  </div>
+  <% @articles.each do |article| %>
+    <div class="row articles">
+      <div class="col s12">
+        <div class="card small">
+          <div class="card-image">
+            <%= image_tag 'sample-2.jpg', alt: 'sample-1' %>
+          </div>
+          <div class="card-content">
+            <p><span class="article-title"><%= article.title %></span> - <span class="article-author"><%= article.author %></span></p>
+            <p class="truncate">
+              <%= article.content %>
+            </p>
+          </div>
+          <div class="card-action">
+            <%= link_to 'see more', '#' %>
+          </div>
         </div>
-    <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

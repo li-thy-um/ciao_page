@@ -4,6 +4,3 @@
 
 $(document).ready => 
     $('collapsible').collapsible({accordion : false})
-
-$.ajaxComplete => 
-    $('collapsible').collapsible({accordion : false})

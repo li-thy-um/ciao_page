@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= @page_title or "Ciao.moe" %></title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <title><%= generate_title yield :title %></title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'http://fonts.useso.com/icon?family=Material+Icons' %>
-    <%= stylesheet_link_tag     'http://fonts.useso.com/css?family=Abel', ref: 'stylesheet', type: 'text/css' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'http://fonts.useso.com/css?family=Abel', ref: 'stylesheet', type: 'text/css' %>
+    <%= javascript_include_tag 'application' %>
     <%= yield :head %>
     <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="body">
     <nav class="z-depth-1" role="navagation">
         <div class="container">
             

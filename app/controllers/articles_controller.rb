@@ -11,7 +11,8 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:tag_id]
-      @articles = Tag.find(params[:tag_id]).articles.all
+      @tag = Tag.find(params[:tag_id])
+      @articles = @tag && @tag.articles.all
     end
     @articles ||= Article.all
     @tags = Tag.all

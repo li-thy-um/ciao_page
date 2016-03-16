@@ -3,9 +3,9 @@
 one:
   title: MyString
   author: MyString
-  text: MyText
+  content: MyText
 
 two:
   title: MyString
   author: MyString
-  text: MyText
+  content: MyText

@@ -4,8 +4,4 @@
 
 $(document).ready => 
     $('.parallax').parallax()
-    $('.button-collapse').sideNav()
-  
-$.ajaxComplete => 
-    $('.parallax').parallax()
     $('.button-collapse').sideNav()  
