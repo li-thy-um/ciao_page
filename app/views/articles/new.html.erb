@@ -1,27 +1,27 @@
 <% provide :title, 'New Article' %>
 <div class="container">
-  <div class="row">
-    <h1>New Article</h1>
-    <%= form_for :article, url: articles_path, html: {class: "col s12"} do |f| %>
-      <div class="row">
-        <div class="input-field col s6">
-          <%= f.text_field :title, class: 'validate' %>
-          <%= f.label :title %>
-        </div>
-        <div class="input-field col s4 offset-s1">
-          <%= f.text_field :author, class: 'validate', value: 'aaa' %>
-          <%= f.label :author %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= f.text_area :content, class: "materialize-textarea validate" %>
-          <%= f.label :content %>
-        </div>
-      </div>
-      <%= f.button class: 'btn waves-light waves-effect', name: 'post' do %>
-        Submit<i class="material-icons right">send</i>
-      <% end %>
-    <% end %>
-  </div>
+    <div class="row">
+        <h1>New Article</h1>
+        <%= form_for :article, url: articles_path, html: {class: "col s12"} do |f| %>
+            <div class="row">
+                <div class="input-field col s6">
+                    <%= f.text_field :title, class: 'validate' %>
+                    <%= f.label :title %>
+                </div>
+                <div class="input-field col s4 offset-s1">
+                    <%= f.text_field :author, class: 'validate', value: 'aaa' %>
+                    <%= f.label :author %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <%= f.text_area :content, class: "materialize-textarea validate" %>
+                    <%= f.label :content %>
+                </div>
+            </div>
+            <%= f.button class: 'btn waves-light waves-effect', name: 'post' do %>
+                Submit<i class="material-icons right">send</i>
+            <% end %>
+        <% end %>
+    </div>
 </div>

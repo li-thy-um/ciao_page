@@ -10,28 +10,10 @@
     <%= csrf_meta_tags %>
 </head>
 <body id="body">
-    <nav class="z-depth-1" role="navagation">
-        <div class="container">
-            
-            <div class="nav-wrapper">
-                <%= link_to 'Ciao.moe', root_path, class: 'brand-logo' %>
-                <a href="javascript:void(0);" data-activates="mobile-nav" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <li><%= link_to 'Articles', articles_path %></li>
-                    <li><%= link_to 'Projects', articles_path %></li>
-                    <li><%= link_to 'About me', articles_path %></li>
-                </ul>
-                <ul class="side-nav" id="mobile-nav">
-                    <li><%= link_to 'Articles', articles_path %></li>
-                    <li><%= link_to 'Projects', articles_path %></li>
-                    <li><%= link_to 'About me', articles_path %></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <%= render 'shared/navbar' %>
 
     <%= yield %>
+
+    <%= render 'shared/footer' %>
 </body>
 </html>
