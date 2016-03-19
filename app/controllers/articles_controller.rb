@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  include SessionHelper
+  before_action :should_login, except: [:show, :index]
+
   def new
     @article = Article.new
   end

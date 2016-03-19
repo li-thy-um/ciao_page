@@ -6,22 +6,22 @@
             <div class="row">
                 <div class="input-field col m7 s12">
                     <%= f.text_field :title, class: 'validate' %>
-                    <%= f.label :title %>
+                    <%= f.label :title, :Title %>
                 </div>
                 <div class="input-field col m4 offset-m1 s12">
                     <%= f.text_field :author, class: 'validate', value: 'just a placeholder' %>
-                    <%= f.label :author %>
+                    <%= f.label :author, :Author %>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <%= f.text_area :content, class: "materialize-textarea validate" %>
-                    <%= f.label :content %>
+                    <%= f.label :content, :Content %>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    
+                    some field not implemented
                 </div>
             </div>
             <%= f.button class: 'btn waves-light waves-effect' do %>

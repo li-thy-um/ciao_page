@@ -1,2 +1,23 @@
-<h1>Session#new</h1>
-<p>Find me in app/views/session/new.html.erb</p>
+<% provide :title, 'Login to admin' %>
+<div class="container">
+    <div class="row">
+        <h1>Login</h1>
+        <%= form_for :session, url: admin_login_path, html: {class: "col s12"} do |f| %>
+            <div class="row">
+                <div class="input-field col s12 m8 l6">
+                    <%= f.email_field :email, class: "validate" %>
+                    <%= f.label :email, :Email %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m8 l6">
+                    <%= f.password_field :password, class: "validate" %>
+                    <%= f.label :password, :Password %>
+                </div>
+            </div>
+            <button class="btn waves-light waves-effect" type='submit' data-disable>
+                Login
+            </button>
+        <% end %>
+    </div>
+</div>

@@ -11,9 +11,14 @@
 </head>
 <body id="body">
     <%= render 'shared/navbar' %>
-
+    
     <%= yield %>
 
     <%= render 'shared/footer' %>
+    <script>
+        <% flash.each do |message_type, message| %>
+            Materialize.toast('<%= "[#{message_type}]: #{message}" %>', 4000, 'rounded')   
+        <% end %>
+    </script>
 </body>
 </html>
