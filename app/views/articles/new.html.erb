@@ -2,14 +2,14 @@
 <div class="container">
     <div class="row">
         <h1>New Article</h1>
-        <%= form_for :article, url: articles_path, html: {class: "col s12"} do |f| %>
+        <%= form_for @article, url: {action: "create"}, html: {class: "col s12"} do |f| %>
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col m7 s12">
                     <%= f.text_field :title, class: 'validate' %>
                     <%= f.label :title %>
                 </div>
-                <div class="input-field col s4 offset-s1">
-                    <%= f.text_field :author, class: 'validate', value: 'aaa' %>
+                <div class="input-field col m4 offset-m1 s12">
+                    <%= f.text_field :author, class: 'validate', value: 'just a placeholder' %>
                     <%= f.label :author %>
                 </div>
             </div>
@@ -19,8 +19,13 @@
                     <%= f.label :content %>
                 </div>
             </div>
-            <%= f.button class: 'btn waves-light waves-effect', name: 'post' do %>
-                Submit<i class="material-icons right">send</i>
+            <div class="row">
+                <div class="input-field col s12">
+                    
+                </div>
+            </div>
+            <%= f.button class: 'btn waves-light waves-effect' do %>
+                Create<i class="material-icons right">send</i>
             <% end %>
         <% end %>
     </div>
