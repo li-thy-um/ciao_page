@@ -20,4 +20,13 @@ class User < ActiveRecord::Base
 	def remember
 		self.session_token = User.new_token
 		update_attribute(:session_digest, User.digest(self.session_token))
+	end
+
+	def forget
+		update_attribute(:session_digest, nil)
+	end
+
+	def authenticate_token(token)
+		BCrypt::password.new(self.session_digest).is_password?(token)		
+	end
 end

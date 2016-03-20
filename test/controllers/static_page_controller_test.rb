@@ -13,7 +13,7 @@ class StaticPageControllerTest < ActionController::TestCase
 
   test "should get admin" do
     get :admin
-    assert_response :success
+    assert_response :redirect
   end
 
 end

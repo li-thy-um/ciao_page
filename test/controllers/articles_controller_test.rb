@@ -11,6 +11,6 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "should get articles new" do
     get :new
-    assert_response :success
+    assert_response :redirect
   end
 end
