@@ -1,5 +1,6 @@
 module SessionHelper
 	def should_login
+		return if logged_in?
   	flash.alert = "Please log in."
   	redirect_to admin_login_url
   end
@@ -20,14 +21,13 @@ module SessionHelper
   def current_user
   	if (user_id = cookies.signed[:user_id])
   		user = User.find_by(id: user_id)
-  		if user && user.authenicate_token(cookies.signed[:session_token])
-  			log_in user
+  		if user && user.authenticate_token(cookies[:session_token])
   			@current_user = user
   		end
   	end
   end
 
   def logged_in?
-  	current_user.nil?
+  	!current_user.nil?
   end
 end

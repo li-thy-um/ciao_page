@@ -27,6 +27,6 @@ class User < ActiveRecord::Base
 	end
 
 	def authenticate_token(token)
-		BCrypt::password.new(self.session_digest).is_password?(token)		
+		BCrypt::Password.new(self.session_digest).is_password?(token)		
 	end
 end

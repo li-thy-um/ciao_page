@@ -1,21 +1,27 @@
-<nav class="z-depth-1" role="navagation">
-    <div class="container">
+<nav class="z-depth-1" role="navagation">        
+    <div class="nav-wrapper">
+        <%= link_to 'Ciao.moe', root_path, class: 'brand-logo' %>
+        <a href="javascript:void(0);" data-activates="mobile-nav" class="button-collapse">
+            <i class="material-icons">menu</i>
+        </a>
         
-        <div class="nav-wrapper">
-            <%= link_to 'Ciao.moe', root_path, class: 'brand-logo' %>
-            <a href="javascript:void(0);" data-activates="mobile-nav" class="button-collapse">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><%= link_to 'Admin', admin_path %></li>
-                <li><%= link_to 'Articles', articles_path %></li>
-                <li><%= link_to 'About me', about_path %></li>
-            </ul>
-            <ul class="side-nav" id="mobile-nav">
-                <li><%= link_to 'Admin', admin_path %></li>
-                <li><%= link_to 'Articles', articles_path %></li>
-                <li><%= link_to 'About me', about_path %></li>
-            </ul>
-        </div>
+        <ul class="right hide-on-med-and-down">
+            <li style="margin-right: 5px">
+                <% if logged_in? %>
+                    <%= link_to admin_logout_path, class: "chip" do %>
+                        <%= image_tag 'yuna.jpg', alt: 'User profile' %>
+                        <%= current_user.name %>
+                    <% end %>
+                <% end %>
+            </li>
+            <li><%= link_to 'Admin', admin_path %></li>
+            <li><%= link_to 'Articles', articles_path %></li>
+            <li><%= link_to 'About me', about_path %></li>
+        </ul>
+        <ul class="side-nav" id="mobile-nav">
+            <li><%= link_to 'Admin', admin_path %></li>
+            <li><%= link_to 'Articles', articles_path %></li>
+            <li><%= link_to 'About me', about_path %></li>
+        </ul>
     </div>
 </nav>
