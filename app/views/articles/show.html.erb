@@ -1,0 +1,14 @@
+<div class="container">
+    <article>
+        <header>
+            <h3><%= @article.title %></h3>
+            <p class="meta">
+                By
+                <%= @article.author %>
+                on
+                <%= @article.created_at %>
+            </p>
+        </header>
+        <%= @article.content %>
+    </article>
+</div>
