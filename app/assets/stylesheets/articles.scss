@@ -1,3 +1,18 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+article {
+    margin-top: 32px;
+}
+
+article header {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 32px;
+}
+article header .meta, section header .meta {
+    color: #616161;
+    margin: 0.5em 0;
+}
+.comments {
+    margin-top: 64px;
+}

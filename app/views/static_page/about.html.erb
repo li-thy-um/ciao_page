@@ -1,30 +1,31 @@
 <% provide :title, 'About me' %>
+<header>
+    <div class="toolbar">
+        <div class="toolbar-action">
+            <%= link_to root_path, class: 'btn-floating red lighten-2' do %>
+                <i class="material-icons">arrow_back</i>
+            <% end %>
+        </div>
+    </div>
+</header>
 <main>
     <div class="container">
         <section class="timeline">
-            <div class="timeline-block">
-                <div class="timeline-node">
-                    
-                </div>
-                <div class="timeline-content">
-                    <p>here is some content</p>
-                </div>
-            </div>
-            <div class="timeline-block">
-                <div class="timeline-node">
-                    
-                </div>
-                <div class="timeline-content">
-                    <p>here is some content</p>
-                </div>
-            </div>
-            <div class="timeline-block">
-                <div class="timeline-node">
-                    
-                </div>
-                <div class="timeline-content">
-                    <p>here is some content</p>
-                </div>
+            <div class="row">
+                <ul id="timeline-list" class="col s12 m9 l6">
+                    <li class="card-panel">
+                        <p>this is first of all</p>
+                    </li>
+                    <li class="card-panel">
+                        <p>this is second of all</p>
+                    </li>
+                    <li class="card-panel">
+                        <p>this is last two of all</p>
+                    </li>
+                    <li class="card-panel">
+                        <p>this is last one of all</p>
+                    </li>
+                </ul>    
             </div>
         </section>
     </div>

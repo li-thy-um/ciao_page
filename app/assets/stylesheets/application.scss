@@ -16,11 +16,14 @@
  
 @import "materialize";
 
-article {
-    font-size: 1em;
-}
-
 .nav-wrapper {
     padding-left: 20px !important;
     padding-right: 20px !important;
+}
+
+.toolbar {
+    padding: 4px;
+    .toolbar-action {
+        padding: 12px;
+    }
 }

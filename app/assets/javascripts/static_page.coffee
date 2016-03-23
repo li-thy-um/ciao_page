@@ -4,3 +4,6 @@
 
 $(document).ready => 
     $('.parallax').parallax() 
+    $(".button-collapse").sideNav();
+    option = [{ selector: '.timeline', offset: 200, callback: 'Materialize.showStaggeredList("#timeline-list")'}]
+    Materialize.scrollFire(option)
