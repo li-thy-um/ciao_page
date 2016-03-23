@@ -17,7 +17,12 @@
 @import "materialize";
 
 body {
-    font-family: 'Abel', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+article {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 .card-action {
@@ -30,6 +35,4 @@ body {
     padding-right: 20px !important;
 }
 
-p, article {
-    font-family: 'Roboto', sans-serif;
-}
+
