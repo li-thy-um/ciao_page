@@ -15,7 +15,7 @@ class Article < ActiveRecord::Base
   	}
   	renderer = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
   	html = renderer.render(text).html_safe
-    
+    html.gsub(/<\/?script>/,'')
   end
 
   class HTMLwithCodeRay < Redcarpet::Render::HTML

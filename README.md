@@ -5,9 +5,10 @@
 
 - [ ] static page : home, about me
 - [ ] article
+    - [x] add Disqus
 - [ ] admin
 
 
 ### Bugs to fix:
   
-- [ ] markdown converter have some bug with '> quote'
+- [x] markdown converter have some bug with '> quote'
