@@ -13,8 +13,9 @@ class Article < ActiveRecord::Base
   		hard_wrap: true,
   		strikethrough: true
   	}
-  	markdown = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
-  	markdown.render(ERB::Util.h(text)).html_safe
+  	renderer = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
+  	html = renderer.render(text).html_safe
+    
   end
 
   class HTMLwithCodeRay < Redcarpet::Render::HTML
