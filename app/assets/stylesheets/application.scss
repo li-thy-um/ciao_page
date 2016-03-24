@@ -24,6 +24,13 @@
 .toolbar {
     padding: 4px;
     .toolbar-action {
-        padding: 12px;
+        padding: 6px;
+        i {
+            border-radius: 50%;
+            padding: 6px;
+        }
+        i:hover {
+            background-color: #f0f0f0;
+        }
     }
 }

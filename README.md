@@ -3,9 +3,11 @@
 
 ### To do list:
 
-- [ ] static page : home, about me
-- [ ] article
+- [x] static page : home, about me
+- [-] article
     - [x] add Disqus
+    - [x] markdown supported
+    - [ ] article index
 - [ ] admin
 
 

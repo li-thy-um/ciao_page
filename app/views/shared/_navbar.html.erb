@@ -10,7 +10,7 @@
                 <li style="margin-right: 5px">
                     <% if logged_in? %>
                         <%= link_to admin_logout_path, class: "chip" do %>
-                            <%= image_tag 'yuna.jpg', alt: 'User profile' %>
+                            <%= image_tag 'profile.jpg', alt: 'User profile' %>
                             <%= current_user.name %>
                         <% end %>
                     <% end %>
