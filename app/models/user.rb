@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	validates :name, presence: true
 	has_secure_password
 	validates :password, presence: true
+	validates :password_confirmation, presence: true
 
 	def User.new_token
 		SecureRandom.urlsafe_base64

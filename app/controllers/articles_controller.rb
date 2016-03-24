@@ -3,13 +3,15 @@ class ArticlesController < ApplicationController
   before_action :should_login, except: [:show, :index]
 
   def new
-    @article = Article.new
+    @article ||= Article.new
   end
 
   def create
     @article = Article.new(article_params)
-    @article.save
-    redirect_to @article
+    if @article.save
+      redirect_to @article and return
+    end
+    render new
   end
 
   def index
@@ -32,16 +34,15 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
-      redirect_to @article
-    else
-      render 'edit'
+      redirect_to @article and return
     end
+    render 'edit'
   end
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    redirect_to articles_path
+    redirect_to articles_url
   end
 
   private
