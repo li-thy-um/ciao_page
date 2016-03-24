@@ -8,7 +8,9 @@
     - [x] add Disqus
     - [x] markdown supported
     - [ ] article index
+    - [ ] tags
 - [ ] admin
+- [ ] actions history
 
 
 ### Bugs to fix:
