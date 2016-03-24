@@ -16,11 +16,6 @@
  
 @import "materialize";
 
-.nav-wrapper {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
-
 .toolbar {
     padding: 4px;
     .toolbar-action {
@@ -28,9 +23,17 @@
         i {
             border-radius: 50%;
             padding: 6px;
-        }
-        i:hover {
-            background-color: #f0f0f0;
+            :hover {
+                background-color: #f0f0f0;
+            }
         }
     }
+}
+
+a {
+    color: #0d47a1;
+    transition: color 0.15s;  
+    :hover {
+        color: #093272;
+    }  
 }

@@ -6,46 +6,26 @@
 <header>
     <div class="toolbar">
         <div class="toolbar-action">
-            <%= link_to admin_path do %>
+            <%= link_to root_path do %>
                 <i class="material-icons">arrow_back</i>
             <% end %>
         </div>
     </div>
 </header>
-<div class="container">
-    <div class="row tags">
-        <div class="col s12">
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">label</i>Select a tag</div>
-                    <div class="collapsible-body">
-                        <%= link_to 'All', articles_path, class: "waves-effect btn z-depth-1" %>
-                        <% @tags.each do |t| %>
-                            <%= link_to t.name, articles_path(tag_id: t.id), class: "waves-effect btn z-depth-1" %>
+<main>
+    <div class="container">
+        <div class="articles-nav">
+            <h4>Articles (<%= @articles.size %>)</h4>
+            <ul>
+                <% @articles.each do |article| %>
+                    <li>
+                        <%= link_to article_path(article) do %>
+                            <span><%= article.title %></span>
+                            <time class="text-muted"><%= article.created_at.localtime.strftime '%d %b %Y' %></time>
                         <% end %>
-                    </div>
-                </li>
+                    </li>
+                <% end %>
             </ul>
-        </div>
+        </nav>
     </div>
-    <% @articles.each do |article| %>
-        <div class="row articles">
-            <div class="col s12">
-                <div class="card small">
-                    <div class="card-image">
-                        <%= image_tag 'sample-2.jpg', alt: 'sample-1' %>
-                    </div>
-                    <div class="card-content">
-                        <p><span class="article-title"><%= article.title %></span> - <span class="article-author"><%= article.author %></span></p>
-                        <p class="truncate">
-                            <%= article.content %>
-                        </p>
-                    </div>
-                    <div class="card-action">
-                        <%= link_to 'see more', article_path(article) %>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <% end %>
-</div>
+</main>

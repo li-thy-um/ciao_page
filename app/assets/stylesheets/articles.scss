@@ -3,16 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 article {
     margin-top: 32px;
+    header {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 32px;
+        .meta {
+            color: #616161;
+            margin: 0.5em 0;
+            font-size: 16px;
+        }
+    }
+    main {
+        font-size: 16px;
+    }
 }
 
-article header {
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 32px;
-}
-article header .meta, section header .meta {
-    color: #616161;
-    margin: 0.5em 0;
-}
 .comments {
     margin-top: 64px;
+}
+
+.articles-nav {
+    h4 {
+        margin: 48px 0 32px;
+        color: #b71c1c;
+    }
+    li {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+    .text-muted {
+        color: #616161;
+    }
 }

@@ -6,7 +6,3 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-tags = Tag.create([{name: 'ACG'}, {name: 'Ruby'}, {name: 'Python'}, {name: 'C#'}, {name: 'Html'}, {name: 'CSS'}, {name: 'JavaScript'}])
-article = Article.create title: 'ACG article', author: 'sw', content: 'this is a ACG article, here is some test content'
-article.tags << Tag.find(1)
-article.save

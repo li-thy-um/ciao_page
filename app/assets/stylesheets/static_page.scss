@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.nav-wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
 .parallax-container {
     height: 650px !important;
 }
