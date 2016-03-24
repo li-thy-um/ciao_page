@@ -4,7 +4,7 @@
 ### To do list:
 
 - [x] static page : home, about me
-- [-] article
+- [ ] article
     - [x] add Disqus
     - [x] markdown supported
     - [ ] article index
