@@ -16,6 +16,44 @@
  
 @import "materialize";
 
+@media only screen and (min-width: 0) {
+  main {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    font-size: 16px !important;
+  }
+}
+
+h1 {
+  font-size: 2em !important; 
+}
+
+h2 {
+  font-size: 1.75em !important; 
+}
+
+h3 {
+  font-size: 1.5em !important; 
+}
+
+h4 {
+  font-size: 1.25em !important; 
+}
+
+h5, h6 {
+  font-size: 1em !important; 
+}
+
 .toolbar {
     padding: 4px;
     .toolbar-action {

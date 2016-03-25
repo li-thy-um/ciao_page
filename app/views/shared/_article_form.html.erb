@@ -10,6 +10,15 @@
         </div>
     </div>
     <div class="row">
+        <div class="file-field input-field col s12">
+            <div class="btn">
+                <span>File</span>
+                <%= f.file_field :file %>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
         <div class="input-field col s12">
             <%= f.text_area :content, class: "materialize-textarea validate" %>
             <%= f.label :content, :Content %>
@@ -20,7 +29,7 @@
             some field not implemented
         </div>
     </div>
-    <%= f.button class: 'btn waves-light waves-effect' do %>
+    <%= button_tag class: 'btn waves-light waves-effect' do %>
         Submit<i class="material-icons right">send</i>
     <% end %>
 <% end %>

@@ -7,7 +7,9 @@
 - [ ] article
     - [x] add Disqus
     - [x] markdown supported
-    - [ ] article index
+    - [X] file upload
+    - [x] article index
+    - [ ] write first article
     - [ ] tags
 - [ ] admin
 - [ ] actions history

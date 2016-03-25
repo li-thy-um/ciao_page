@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    uploaded_io = params[:article][:file]
+    unless uploaded_io.nil?
+      @article.content = uploaded_io.read
+    end
     if @article.save
       redirect_to @article and return
     end
@@ -33,9 +37,14 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update(article_params)
-      redirect_to @article and return
+    @article.title = params[:article][:title]
+    @article.author = params[:article][:author]
+    if (uploaded_io = params[:article][:file])
+      @article.content = uploaded_io.read
+    else
+      @article.content = params[:article][:content]
     end
+    (redirect_to @article and return) if @article.save    
     render 'edit'
   end
 
@@ -43,6 +52,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_url
+  end
+
+  def confirm
   end
 
   private

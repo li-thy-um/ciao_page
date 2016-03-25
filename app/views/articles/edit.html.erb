@@ -1,16 +1,7 @@
 <% provide :title, 'Edit Article' %>
-<header>
-    <div class="toolbar">
-        <div class="toolbar-action">
-            <%= link_to @article do %>
-                <i class="material-icons">arrow_back</i>
-            <% end %>
-        </div>
-        <div class="toolbar-action">
-            
-        </div>
-    </div>
-</header>
+<% content_for :header do %>
+    <%= render partial: 'shared/header', locals: { cus_url: @article } %>
+<% end %>
 <div class="container">
     <div class="row">
         <h1>Edit Article</h1>

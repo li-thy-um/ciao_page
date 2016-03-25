@@ -1,31 +1,23 @@
 <% if @tag %>
-    <% provide :title, 'Articles(' + @tag.name + ')' %>
+    <% provide :title, "Articles(#{@tags.name})" %>
 <% else %>
     <% provide :title, 'Articles' %>
 <% end %>
-<header>
-    <div class="toolbar">
-        <div class="toolbar-action">
-            <%= link_to root_path do %>
-                <i class="material-icons">arrow_back</i>
+<% content_for :header do %>
+    <%= render partial: 'shared/header', locals: { cus_url: root_path } %>
+<% end %>
+<div class="container">
+    <div class="articles-nav">
+        <h1>Articles (<%= @articles.size %>)</h1>
+        <ul>
+            <% @articles.each do |article| %>
+                <li>
+                    <%= link_to article_path(article) do %>
+                        <span><%= article.title %></span>
+                        <time class="text-muted"><%= article.created_at.localtime.strftime '%d %b %Y' %></time>
+                    <% end %>
+                </li>
             <% end %>
-        </div>
+        </ul>
     </div>
-</header>
-<main>
-    <div class="container">
-        <div class="articles-nav">
-            <h4>Articles (<%= @articles.size %>)</h4>
-            <ul>
-                <% @articles.each do |article| %>
-                    <li>
-                        <%= link_to article_path(article) do %>
-                            <span><%= article.title %></span>
-                            <time class="text-muted"><%= article.created_at.localtime.strftime '%d %b %Y' %></time>
-                        <% end %>
-                    </li>
-                <% end %>
-            </ul>
-        </nav>
-    </div>
-</main>
+</div>

@@ -1,38 +1,30 @@
 <% provide :title, 'About me' %>
-<header>
-    <div class="toolbar">
-        <div class="toolbar-action">
-            <%= link_to root_path do %>
-                <i class="material-icons">arrow_back</i>
-            <% end %>
+<% content_for :header do %>
+    <%= render partial: 'shared/header', locals: { cus_url: root_path } %>
+<% end %>
+<div class="container">
+    <section class="row">
+        <h3>About me</h3>
+        <%= image_tag 'profile.jpg', class: 'profile-img' %>
+    </section>
+    <section>
+        <p>欢迎来到<%= link_to 'Ciao.moe', root_path %>， 我是platokon， 一个ACG爱好者， 开发新人， 喜欢的东西很多， 不喜欢的东西很少。</p>
+        <p>你可以通过<%= link_to 'platokon@gmail.com', 'mailto:platokon@gmail.com' %> 联系我。</p>
+        <p>我会把代码放在<%= link_to 'Github', 'https://github.com/wongsean' %> 上， 但因为写的太烂经常删。</p>
+        <p>此站诞生于兴趣使然(另外想换工作时)， 但还处于不断的开发过程中， 无奈后端新人， 前端苦手， 在开发中不断不断的改变重构， 如果你看到了这一段， 那说明我终于下决心把它扔上公网了， 毕竟写出来就是要见人的嘛。</p>
+        <p>此站部署于<%= link_to 'Aliyun', 'https://aliyun.com' %>， 后端基于<%= link_to 'Ruby on Rails', 'http://rubyonrails.org/' %>开发， 前端框架使用<%= link_to 'Materialize', 'http://materializecss.com/' %>， 留言系统使用<%= link_to 'Disqus', 'https://disqus.com/' %>。</p>
+        <p>求工作， 求带走%&gt_&lt%</p>
+    </section>
+    <section class="timeline">
+        <div class="row">
+            <ul id="timeline-list" class="col s12 m9 l6">
+                <li class="card-panel">
+                    <p>2016 03 24 Ciao.moe正式上线</p>
+                </li>
+                <li class="card-panel">
+                    <p>2016 03 07 Ciao.moe开始开发</p>
+                </li>
+            </ul>    
         </div>
-    </div>
-</header>
-<main>
-    <div class="container">
-        <section class="row">
-            <h3>About me</h3>
-            <%= image_tag 'profile.jpg', class: 'profile-img' %>
-        </section>
-        <section>
-            <p>欢迎来到<%= link_to 'Ciao.moe', root_path %>， 我是platokon， 一个ACG爱好者， 开发新人， 喜欢的东西很多， 不喜欢的东西很少。</p>
-            <p>你可以通过<%= link_to 'platokon@gmail.com', 'mailto:platokon@gmail.com' %> 联系我。</p>
-            <p>我会把代码放在<%= link_to 'Github', 'https://github.com/wongsean' %> 上， 但因为写的太烂经常删。</p>
-            <p>此站诞生于兴趣使然(另外想换工作时)， 但还处于不断的开发过程中， 无奈后端新人， 前端苦手， 在开发中不断不断的改变重构， 如果你看到了这一段， 那说明我终于下决心把它扔上公网了， 毕竟写出来就是要见人的嘛。</p>
-            <p>此站部署于<%= link_to 'Aliyun', 'https://aliyun.com' %>， 后端基于<%= link_to 'Ruby on Rails', 'http://rubyonrails.org/' %>开发， 前端框架使用<%= link_to 'Materialize', 'http://materializecss.com/' %>， 留言系统使用<%= link_to 'Disqus', 'https://disqus.com/' %>。</p>
-            <p>求工作， 求带走%&gt_&lt%</p>
-        </section>
-        <section class="timeline">
-            <div class="row">
-                <ul id="timeline-list" class="col s12 m9 l6">
-                    <li class="card-panel">
-                        <p>2016 03 24 Ciao.moe正式上线</p>
-                    </li>
-                    <li class="card-panel">
-                        <p>2016 03 07 Ciao.moe开始开发</p>
-                    </li>
-                </ul>    
-            </div>
-        </section>
-    </div>
-</main>
+    </section>
+</div>

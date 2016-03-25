@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+	source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,7 +45,10 @@ group :development do
   gem 'spring'
 end
 
-gem 'pg', group: :production
+group :production do
+	# postgresql
+	gem 'pg'
+end
 
 # Use materialize front end framework
 gem 'materialize-sass'
@@ -53,3 +56,6 @@ gem 'materialize-sass'
 # Use markdown and syntax highlight
 gem 'redcarpet', '~> 2.0'
 gem 'coderay'
+
+# Use Paperclip to upload file
+#gem 'Paperclip', '~> 5.0'
