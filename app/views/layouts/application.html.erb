@@ -2,13 +2,13 @@
 <html>
 <head>
     <title><%= generate_title yield :title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'http://fonts.useso.com/icon?family=Material+Icons' %>
     <%= stylesheet_link_tag    'http://fonts.useso.com/css?family=Abel' %>
     <%= stylesheet_link_tag    'http://fonts.useso.com/css?family=Roboto' %>
     <%= javascript_include_tag 'application' %>
     <%= yield :head %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tags %>
 </head>
 <body id="body">
