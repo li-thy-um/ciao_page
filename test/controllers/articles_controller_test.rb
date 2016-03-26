@@ -13,4 +13,5 @@ class ArticlesControllerTest < ActionController::TestCase
     get :new
     assert_response :redirect
   end
+
 end
