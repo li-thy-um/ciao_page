@@ -14,9 +14,10 @@ class Article < ActiveRecord::Base
   		strikethrough: true
   	}
   	renderer = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
-  	html = renderer.render(text).html_safe
-    html.gsub!(/<script>/,'&lt;script&gt;')
-    html.gsub(/<\/script>/,'&lt;/script&gt;')
+  	html = renderer.render(text).\
+      gsub(/<script>/,'&lt;script&gt;').\
+      gsub(/<\/script>/,'&lt;/script&gt;').\
+      html_safe 
   end
 
   class HTMLwithCodeRay < Redcarpet::Render::HTML
