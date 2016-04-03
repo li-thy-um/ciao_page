@@ -1,7 +1,5 @@
-require 'test_helper'
+require 'rails_helper'
 
-class ArticleTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe Article, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

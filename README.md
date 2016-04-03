@@ -5,11 +5,11 @@
 
 - [x] static page : home, about me
 - [ ] article
+    - [x] related views
     - [x] add Disqus
     - [x] markdown supported
     - [X] file upload
-    - [x] article index
-    - [ ] write first article
+    - [x] write first article
     - [ ] tags
 - [ ] admin
 - [ ] actions history

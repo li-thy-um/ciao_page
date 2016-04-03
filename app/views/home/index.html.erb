@@ -1,2 +1,28 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% content_for :header do %>
+    <%= render 'shared/navbar' %>
+<% end %>
+<% content_for :footer do %>
+    <%= render 'shared/footer' %>
+<% end %>
+<div class="parallax-container">
+    <div class="parallax"><%= image_tag 'cover.jpg', :alt => 'cover image' %></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h1>Ciao.moe</h1>
+        <h3>为什么是ciao？</h3>
+        <p class="grey-text text-darken-3 lighten-3">
+            其实就是为了装逼。(╯‵□′)╯︵┻━┻ ciao来自于意大利语，既是'你好'，也是'再见'。关键它还长得挺好看的。
+        </p>
+        <h3>为什么是moe？</h3>
+        <p class="grey-text text-darken-3 lighten-3">
+            moe来自于日语，类似ciao的双关，它既是'萌え'，也是'燃え'的罗马音标(并不是什么教育部'Ministry of Education')。
+            既可爱又帅气的域名后缀。
+        </p>
+        <h3>为什么是Ciao.moe？</h3>
+        <p class="grey-text text-darken-3 lighten-3">
+            理由总是事后才诞生的，前两个问题也好，这个问题也好，其实也不知道为什么这个网站就这样诞生了，就是这样。
+        </p>
+    </div>
+</div>
+

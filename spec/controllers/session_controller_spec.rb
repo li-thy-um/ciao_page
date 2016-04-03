@@ -1,9 +1,5 @@
-require 'test_helper'
+require 'rails_helper'
 
-class SessionControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
+RSpec.describe SessionController, type: :controller do
 
 end

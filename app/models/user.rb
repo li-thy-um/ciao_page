@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
 	attr_accessor :session_token
 
 	before_save { self.email = email.downcase }
-	validates :email, presence: true, uniqueness: {case_sensitive: false}
+	validates :email, presence: true, 
+										uniqueness: {case_sensitive: false}
 	validates :name, presence: true
 	has_secure_password
 	validates :password, presence: true
