@@ -26,6 +26,6 @@ production:
   database: ciao
   username: ciao
   password: ciao
-  pool: 5 # not mandatory
-  timeout: 5000 # not mandatory
+  pool: 5
+  timeout: 5000
   host: localhost
