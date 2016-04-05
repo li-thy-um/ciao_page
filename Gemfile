@@ -1,4 +1,4 @@
-	source 'https://rubygems.org'
+	source 'https://gems.ruby-china.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -30,8 +30,11 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'capistrano-passenger', group: :development
+# group :development do
+#   gem 'capistrano'
+#   gem 'capistrano-rails'
+#   gem 'capistrano-passenger'
+# end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
