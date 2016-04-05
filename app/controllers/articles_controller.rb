@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article and return
     end
-    render new
+    render :new
   end
 
   def index
