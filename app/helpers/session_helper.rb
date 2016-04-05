@@ -2,7 +2,7 @@ module SessionHelper
 	def should_login
 		return if logged_in?
   	flash.alert = "Please log in."
-  	redirect_to admin_login_url
+  	redirect_to users_login_url
   end
 
   def log_in(user)

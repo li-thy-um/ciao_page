@@ -8,7 +8,7 @@
         <ul class="right hide-on-med-and-down">
             <li style="margin-right: 5px">
                 <% if logged_in? %>
-                    <%= link_to admin_logout_path, class: "chip" do %>
+                    <%= link_to users_logout_path, class: "chip" do %>
                         <%= image_tag 'profile.jpg', alt: 'User profile' %>
                         <%= current_user.name %>
                     <% end %>
