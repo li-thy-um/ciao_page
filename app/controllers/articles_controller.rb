@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :should_login, except: [:show, :index]
 
   def new
-    @article ||= Article.new
+    @article = Article.new
   end
 
   def create
