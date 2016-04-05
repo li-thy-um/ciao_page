@@ -1,11 +1,18 @@
+class EmailValidator < ActiveModel::EachValidator
+  def validate_each(record, attribute, value)
+    unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+      record.errors[attribute] << (options[:message] || "is not an email")
+    end
+  end
+end
+
 class User < ActiveRecord::Base
 	attr_accessor :session_token
 	before_save { self.email = email.downcase }
-	EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, presence: true, 
 										length: { maximum: 255 },
 										uniqueness: { case_sensitive: false },
-										format: { with: EMAIL_REGEX }
+										email: true
 	validates :name, presence: true,
 									 length: { maximum: 50 }
 	has_secure_password
